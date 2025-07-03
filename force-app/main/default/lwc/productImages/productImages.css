@@ -1,0 +1,28 @@
+.imgThumbs {
+    overflow: hidden;
+    margin: 20px auto;
+    width: 396px;
+    text-align: center;
+}
+
+.showImg {
+    width: 100px;
+    padding: 15px;
+    float:left;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+.imgHolder {
+    padding: 20px;
+    text-align:center;
+    width: 100%;
+}
+
+img {
+    border: 1px solid #aaa;
+}
+.active {
+    border: 1px dashed #aaa;
+    background-color: #f4f4f4;
+}

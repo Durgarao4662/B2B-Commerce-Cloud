@@ -1,0 +1,20 @@
+<apex:page showheader="false">
+    <style type="text/css">
+        body {
+            background-color: white;
+        }
+    </style>
+    <script>
+        let fullNameOfUser = '{!$User.FirstName}' 
+        + ' ' + 
+        '{!$User.LastName}';
+        console.log(
+            'fullNameOfUser is',
+            fullNameOfUser
+        );
+        sessionStorage.setItem(
+            'CurrentUserFullName',
+            fullNameOfUser
+        );
+    </script>
+</apex:page>

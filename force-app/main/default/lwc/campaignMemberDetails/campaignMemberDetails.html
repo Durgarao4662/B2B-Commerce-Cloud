@@ -1,0 +1,46 @@
+<template>
+<div class="slds-p-around_medium">
+    <h1 class="slds-text-heading_large">Upcoming Event Details</h1>
+
+    <!-- Show Spinner While Loading -->
+    <template if:true={isLoading}>
+        <lightning-spinner alternative-text="Loading"></lightning-spinner>
+    </template>
+
+    <!-- Show Error Message -->
+    <template if:true={error}>
+        <p class="slds-text-color_error">Error: {error.message}</p>
+    </template>
+
+    <!-- Show Campaign Member Records -->
+    <template if:true={campaignMembers.length}>
+        <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+            <thead>
+                <tr>
+                    <th scope="col">Campaign Name</th>
+                    <th scope="col">Event Date</th>
+                    <th scope="col">Event Address</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Created Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <template for:each={campaignMembers} for:item="member">
+                    <tr key={member.Id}>     
+                      <td>{member.campaignName}</td>
+                        <td>{member.eventDateTimeFormatted}</td>
+                        <td>{member.eventAddress}</td>
+                        <td>{member.status}</td>
+                        <td>{member.createdDateFormatted}</td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+    </template>
+
+    <!-- Show No Records Found -->
+    <template if:true={showNoRecordsMessage}>
+        <p>No Campaign Members found for this Contact.</p>
+    </template>
+</div>
+</template>

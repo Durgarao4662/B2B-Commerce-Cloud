@@ -1,0 +1,15 @@
+<template>
+    <div class="form-container">
+      <form onsubmit={handleSubmit}>
+        <lightning-input label="Contact Name" name="name" required></lightning-input>
+        <lightning-input label="Email" name="email" type="email" required></lightning-input>
+        <lightning-input label="Phone" name="phone" type="tel" required></lightning-input>
+        <lightning-input label="Subject" name="subject" required></lightning-input>
+        <lightning-textarea label="Description" name="description" required></lightning-textarea>
+  
+        <div style="margin-top: 1rem;">
+            <lightning-button type="submit" label="Submit Case" variant="brand"></lightning-button>
+        </div>
+      </form>
+    </div>
+  </template>

@@ -1,0 +1,19 @@
+<template>
+    <div>
+        <input
+            type="checkbox"
+            id="termsandconditions"
+            name="terms"
+            checked={checked}
+            onchange={handleChange}
+        ></input>
+        <label class="slds-p-left_x-small" for="termsandconditions">
+            <lightning-formatted-rich-text
+                value={disclaimerLink}
+            ></lightning-formatted-rich-text>
+        </label>
+    </div>
+    <label if:true={showError} class="slds-text-color_error">
+        {error}
+    </label>
+</template>

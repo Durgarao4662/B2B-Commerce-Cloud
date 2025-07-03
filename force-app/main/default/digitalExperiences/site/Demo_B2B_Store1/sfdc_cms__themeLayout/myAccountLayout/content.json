@@ -1,0 +1,293 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "My Account Layout",
+  "contentBody" : {
+    "component" : {
+      "attributes" : { },
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "hidePromoBanner" : false,
+            "hideWishlistShortcut" : true
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "columnGutterWidth" : "",
+                "columnMinHeight" : "",
+                "columnVerticalAlign" : "flex-start",
+                "layoutDirectionDesktop" : "row",
+                "layoutDirectionMobile" : "column",
+                "layoutDirectionTablet" : "column",
+                "sectionConfig" : "{\"UUID\":\"f877113c-1113-4113-8996-c2e579fbcac3\",\"columns\":[{\"UUID\":\"77cd666b-6aa2-4b58-892e-dde77c802e28\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+              },
+              "children" : [ {
+                "id" : "77cd666b-6aa2-4b58-892e-dde77c802e28",
+                "name" : "col1",
+                "title" : "Column 1",
+                "type" : "region"
+              } ],
+              "definition" : "dxp_layout:columns",
+              "id" : "f877113c-1113-4113-8996-c2e579fbcac3",
+              "type" : "component"
+            } ],
+            "id" : "2d599134-cb90-46a4-95c2-05ca2803da00",
+            "name" : "promoBanner",
+            "title" : "Rich Text Editor (Promo Banner)",
+            "type" : "region"
+          }, {
+            "children" : [ {
+              "attributes" : {
+                "alignment" : "left",
+                "imageInfo" : "{\"imageInfoV1\":{\"url\":\"/sfsites/c/cms/delivery/media/MCFHN27MMBNZH67FUJQDLZMUNMDQ?lastModifiedDate=Thu Jun 19 10:31:42 GMT 2025\",\"altText\":\"\",\"contentKey\":\"MCFHN27MMBNZH67FUJQDLZMUNMDQ\",\"contentType\":null}}",
+                "imageInfoMobile" : "",
+                "logoWidth" : 250
+              },
+              "definition" : "dxp_content_layout:siteLogo",
+              "id" : "63b372dc-033c-4d50-bf9d-3ff831465474",
+              "type" : "component"
+            } ],
+            "id" : "ba68771a-4693-467c-a94b-947c8e4b946c",
+            "name" : "storeLogo",
+            "title" : "Site Logo",
+            "type" : "region"
+          }, {
+            "children" : [ {
+              "attributes" : {
+                "alignment" : "left",
+                "showBackLabel" : true,
+                "showHomeLink" : true
+              },
+              "definition" : "commerce_builder:drilldownNavigation",
+              "id" : "40293a94-aada-4e48-9981-2b10afd1a951",
+              "type" : "component"
+            } ],
+            "id" : "376c9167-20d7-4c02-aeb3-b7b77618af0b",
+            "name" : "navigation",
+            "title" : "Multilevel Navigation Menu",
+            "type" : "region"
+          }, {
+            "children" : [ {
+              "attributes" : {
+                "borderRadius" : 0,
+                "placeholderText" : "Enter keyword",
+                "showSearchButton" : true,
+                "showSearchSuggestionsSetup" : true,
+                "textColor" : "rgb(248, 124, 44)"
+              },
+              "definition" : "commerce_builder:searchInput",
+              "id" : "ddd4f3f8-13ae-4595-97a3-8595c42c97bd",
+              "type" : "component"
+            } ],
+            "id" : "111005ee-9fe2-419a-a36c-dd02cbf15076",
+            "name" : "searchInput",
+            "title" : "Search Bar",
+            "type" : "region"
+          }, {
+            "id" : "e414ed58-3b0b-4a51-8596-3337f1870392",
+            "name" : "shopperCopilot",
+            "title" : "Storefront Chat",
+            "type" : "region"
+          }, {
+            "children" : [ {
+              "attributes" : {
+                "iconStyle" : "userIcon",
+                "includeCompanyName" : false,
+                "logOutLabel" : "Log Out",
+                "loginLinkText" : "Log In",
+                "loginLinkTextDecoration" : "{\"underline\":true}",
+                "loginLinkTextOrientation" : "leftOfIcon",
+                "menuStyle" : "iconAndName",
+                "userNameTextOrientation" : "leftOfIcon",
+                "userProfileMenuNavigationMenuEditor" : "Default_User_Profile_Menu3"
+              },
+              "definition" : "commerce_builder:userProfileMenu",
+              "id" : "149c7736-a8f0-4884-80fa-ed674ee51b90",
+              "type" : "component"
+            } ],
+            "id" : "b34f163b-195b-4502-b91f-565ec2b20d8c",
+            "name" : "myAccount",
+            "title" : "Profile Menu",
+            "type" : "region"
+          }, {
+            "children" : [ {
+              "attributes" : {
+                "iconType" : "heart",
+                "isOutlined" : true
+              },
+              "definition" : "commerce_builder:wishlistShortcut",
+              "id" : "3b75943b-9120-4c69-a15d-4a057026a19b",
+              "type" : "component"
+            } ],
+            "id" : "41d3559c-8aed-4876-8602-11ab75b3ee5c",
+            "name" : "wishlist",
+            "title" : "List Badge",
+            "type" : "region"
+          }, {
+            "children" : [ {
+              "attributes" : {
+                "checkoutButtonSize" : "standard",
+                "checkoutButtonText" : "Checkout",
+                "continueShoppingButtonSize" : "standard",
+                "continueShoppingButtonText" : "Continue Shopping",
+                "countType" : "TotalProductCount",
+                "headerText" : "My Cart",
+                "paymentMethodSetId" : "",
+                "recommendationHeaderText" : "You May Also Like",
+                "recommendationPriceDisplayType" : "displayAllPrices",
+                "showContinueShoppingButton" : true,
+                "showCount" : true,
+                "showExpressCheckoutButton" : false,
+                "showMiniCart" : true,
+                "showMiniCartProperties" : true,
+                "showRecommendation" : false,
+                "showViewCartButton" : true,
+                "useManualCapture" : true,
+                "viewCartButtonSize" : "standard",
+                "viewCartButtonText" : "View Cart"
+              },
+              "definition" : "commerce_builder:cartBadge",
+              "id" : "8e67f9f7-cc2b-4794-a104-860162f96d0c",
+              "type" : "component"
+            } ],
+            "id" : "0ec9f05f-b41f-44e3-94fc-1687c681bb6b",
+            "name" : "cart",
+            "title" : "Cart Badge",
+            "type" : "region"
+          } ],
+          "definition" : "commerce_builder:layoutHeader",
+          "id" : "afdcdaa3-e191-4ac2-84b4-058ef075b143",
+          "type" : "component"
+        } ],
+        "id" : "58cc8b11-74fa-479b-8404-0797eb25f197",
+        "name" : "header",
+        "title" : "Header",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "acceptButtonText" : "Accept",
+            "excludedPages" : "Privacy_Policy\nTerms_And_Conditions",
+            "rejectButtonText" : "Reject"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "imageInfos" : "",
+                "richTextValue" : "<p style=\"text-align: center;\"><strong style=\"font-size: 18px;\">Cookie Consent</strong></p><p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\">Your cookie consent policy lives <a href=\"{!Site.basePath}/privacy-policy\" rel=\"noopener noreferrer\" target=\"_blank\"><strong>here</strong></a>. Replace the place holder property with your own.</p>"
+              },
+              "definition" : "community_builder:richTextEditor",
+              "id" : "7741a500-e005-4958-abd1-44535863e128",
+              "type" : "component"
+            } ],
+            "id" : "8e5e5116-e47c-4d4f-a3ae-75d58b8407cb",
+            "name" : "content",
+            "title" : "Content",
+            "type" : "region"
+          } ],
+          "definition" : "commerce_builder:consentBlanket",
+          "id" : "164eb60f-e7f9-4fe6-a4ac-430035409aa5",
+          "type" : "component"
+        }, {
+          "attributes" : {
+            "backgroundColor" : "rgb(255, 255, 255)"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "backgroundImageConfig" : "",
+                "backgroundImageOverlay" : "rgba(0,0,0,0)",
+                "componentSpacerSize" : "",
+                "layoutDirectionDesktop" : "row",
+                "layoutDirectionMobile" : "column",
+                "layoutDirectionTablet" : "column",
+                "maxContentWidth" : "",
+                "sectionColumnGutterWidth" : "",
+                "sectionConfig" : "{\"UUID\":\"d0a1cfdc-89ae-4fe8-8bc0-a365690806c4\",\"columns\":[{\"UUID\":\"03f566e0-2f19-41b3-a2c2-1fd76d05f06f\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":null}]}",
+                "sectionMinHeight" : "",
+                "sectionVerticalAlign" : "flex-start"
+              },
+              "children" : [ {
+                "children" : [ {
+                  "attributes" : { },
+                  "definition" : "c:footerSection",
+                  "id" : "963d2d4f-040c-4229-8071-141a9957c42e",
+                  "type" : "component"
+                } ],
+                "id" : "03f566e0-2f19-41b3-a2c2-1fd76d05f06f",
+                "name" : "col1",
+                "title" : "Column 1",
+                "type" : "region"
+              } ],
+              "definition" : "community_layout:section",
+              "id" : "d0a1cfdc-89ae-4fe8-8bc0-a365690806c4",
+              "type" : "component"
+            } ],
+            "id" : "fed0d622-1011-4b3a-8126-b6d328320944",
+            "name" : "content",
+            "title" : "Content",
+            "type" : "region"
+          } ],
+          "definition" : "commerce_builder:layoutFooter",
+          "id" : "293aae98-b1c3-4634-bead-7478e7744585",
+          "type" : "component"
+        } ],
+        "id" : "9b43e913-ae8f-4fac-ac18-306dced0af9c",
+        "name" : "footer",
+        "title" : "Footer",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : { },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "backgroundColor" : "",
+                "isLinkable" : false,
+                "linkAssistiveText" : "",
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "small",
+                "text" : "Hi {!User.Commerce.Profile.firstName},",
+                "textAlign" : "left",
+                "textDecoration" : "{\"bold\": true}",
+                "textDisplayInfo" : "{\"textStyle\": \"heading-large\", \"headingTag\": \"h1\"}"
+              },
+              "definition" : "dxp_base:textBlock",
+              "id" : "d3389d28-f578-47ec-9267-16221c2b1111",
+              "type" : "component"
+            } ],
+            "id" : "ce35a8f8-f54e-4465-a87d-2c8c2edad00a",
+            "name" : "welcomeMessage",
+            "title" : "welcomeMessage",
+            "type" : "region"
+          }, {
+            "children" : [ {
+              "attributes" : {
+                "navItemSpacing" : "medium",
+                "navigationLinkSetDevName" : "Default_My_Account_Menu3"
+              },
+              "definition" : "commerce_builder:navigationMenuItemList",
+              "id" : "1ade300d-87bc-4fd0-83bc-3a8d6f312547",
+              "type" : "component"
+            } ],
+            "id" : "da36bf3d-1392-44ec-9c43-77963cae9749",
+            "name" : "navigationMenuItemList",
+            "title" : "navigationMenuItemList",
+            "type" : "region"
+          } ],
+          "definition" : "commerce_my_account:navigationMenuContainer",
+          "id" : "f3d8cb1a-9151-4a93-83e8-a02a5e4f55e1",
+          "type" : "component"
+        } ],
+        "id" : "614520e5-d813-4301-9309-bdea74f05308",
+        "name" : "navigation",
+        "title" : "Navigation",
+        "type" : "region"
+      } ],
+      "definition" : "commerce_my_account:myAccountLayout",
+      "id" : "46afc5fa-75ba-4618-9802-75882db2c074",
+      "type" : "component"
+    }
+  },
+  "urlName" : "my-account-layout"
+}

@@ -1,0 +1,14 @@
+<template>
+    <template if:true={hasProduct}>
+        <div class="imgHolder">
+            <img data-name="myDiv" src={displayableProduct.image.url} alt={displayableProduct.image.alternativeText} width="400" height="400">
+        </div>
+        <div class="imgThumbs" >
+            <template iterator:it={getProductImages}>
+                <a key={it.value.url} href="#" class="showImg" onclick={swapImage} >
+                    <img src={it.value.url} width="100" height="100" alt={it.value.alternateText} />
+                </a>
+            </template>
+        </div>
+    </template>
+</template>

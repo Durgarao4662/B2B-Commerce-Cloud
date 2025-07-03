@@ -1,0 +1,123 @@
+<template>
+      <!-- Credit Card Error Message -->
+      <div
+      if:true={creditCardErrorMessage}
+      class="card-auth-error slds-scoped-notification slds-media slds-media_center slds-theme_error"
+      role="alert"
+  >
+      <div class="slds-media__figure">
+          <lightning-icon
+              icon-name="utility:error"
+              variant="error"
+              size="small"
+          ></lightning-icon>
+      </div>
+      <div class="slds-media__body">
+          <p>{creditCardErrorMessage}</p>
+      </div>
+  </div>
+    <div class="slds ">
+  
+      <!-- slds-p-left_x-small slds-p-right_x-small  -->
+      <div class="slds-grid  slds-wrap ">
+  
+        <div class="slds-col slds-size_1-of-1 slds-large-size_8-of-12 cc-input slds-form ">
+  
+          <div class="slds-form__row">
+            <div class="slds-form__item" role="listitem">
+              <div class="slds-form-element slds-form-element_horizontal slds-form-element_1-col cardNumberFormElement"
+                id="cardNumberFormElement">
+                <label class="slds-form-element__label" for="number">
+                  <abbr class="slds-required" title="required">*</abbr>
+                  Card Number
+                </label>
+                <div class="slds-form-element__control">
+                  <input data-validate data-card-number class="slds-input" onblur={handleCardNumberChange}
+                                    oninput={handleCardNumberChange} onchange={handleCardNumberChange} name="cardNumber"
+                                    value={cardNumber} label={labels.CardNumberLabel}
+                                    placeholder={labels.CardNumberPlaceholder} autocomplete="off" max-length="16"
+                                    message-when-pattern-mismatch={labels.InvalidCreditCardNumber}
+                                    onkeyup={preventSensitiveInformationPropagation}
+                                    onkeydown={preventSensitiveInformationPropagation}
+                                    onkeypress={preventSensitiveInformationPropagation}>
+                  <div class="slds-form-element__help slds-hide cardNumberError" id="cardNumberError">Please enter a valid
+                    credit card number</div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="slds-form__row">
+            <div class="slds-form__item" role="listitem" if:false={hideCardHolderName}>
+              <div class="slds-form-element slds-form-element_horizontal slds-form-element_1-col cardNameFormElement"
+                id="cardNameFormElement">
+                <label class="slds-form-element__label" for="name">
+                  <abbr class="slds-required" title="required">*</abbr>
+                  Full Name
+                </label>
+                <div class="slds-form-element__control">
+                  <input data-validate data-cardholder-name placeholder={labels.CardHolderNamePlaceholder}
+                                    type="text" name="cardHolderName" class="slds-input"
+                                    oninput={handleCardHolderNameChange} onblur={handleCardHolderNameChange}
+                                    onkeyup={preventSensitiveInformationPropagation}
+                                    onkeydown={preventSensitiveInformationPropagation}
+                                    onkeypress={preventSensitiveInformationPropagation}
+                                    onchange={preventSensitiveInformationPropagation}>
+                  <div class="slds-form-element__help slds-hide cardNameError" id="cardNameError">Please enter your name
+                    as it appears on your card</div>
+                </div>
+  
+              </div>
+            </div>
+          </div>
+  
+          <div class="slds-form__row">
+            <div class="slds-form__item" role="listitem" if:false={hideExpiry}>
+              <div class="slds-form-element slds-form-element_horizontal cardExpiryFormElement"
+                id="cardExpiryFormElement">
+                <label class="slds-form-element__label" for="expiry">
+                  <abbr class="slds-required" title="required">*</abbr>
+                  Expiry
+                </label>
+                <div class="slds-form-element__control">
+                  <input data-validate data-card-expiry placeholder="MM/YYYY" type="tel" name="expiryMonth" class="slds-input"
+                                    value={expiryMonth} oninput={handleExpiryInput} onblur={handleExpiryInput}>
+                  <div class="slds-form-element__help slds-hide cardExpiryError" id="cardExpiryError">Please enter a valid
+                    date in the future</div>
+                </div>
+  
+              </div>
+            </div>
+  
+            <div class="slds-form__item" role="listitem" if:false={hideCvv}>
+              <div class="slds-form-element slds-form-element_horizontal cardCVVFormElement" id="cardCVVFormElement">
+                <label class="slds-form-element__label" for="cvc">
+                  <abbr class="slds-required" title="required">*</abbr>
+                  CVV
+                </label>
+                <div class="slds-form-element__control">
+                  <input data-validate data-cvv type="number" name="cvv" class="slds-input" value={cvv}
+                                oninput={handleCvvChange} label={labels.CvvLabel} placeholder={labels.CvvPlaceholder}
+                                onblur={handleCvvChange} onkeyup={preventSensitiveInformationPropagation}
+                                onkeydown={preventSensitiveInformationPropagation}
+                                onkeypress={preventSensitiveInformationPropagation}
+                                onchange={preventSensitiveInformationPropagation}>
+                  <div class="slds-form-element__help slds-hide cardCVVError" id="cardCVVError">Please enter a valid
+                    CVV/CVC number</div>
+                </div>
+  
+              </div>
+            </div>
+          </div>
+  
+        </div>
+  
+        <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12" style="height: 143px;">
+          <div lwc:dom="manual" id="cc-wrapper" class="cc-wrapper cc-inner-wrapper">
+          </div>
+        </div>
+  
+      </div>
+  
+    </div>
+  </template>

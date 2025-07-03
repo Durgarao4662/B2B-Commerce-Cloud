@@ -1,0 +1,16 @@
+body{
+    padding: 10px;
+    margin: auto;
+}
+.btn1{
+    float: right;
+}
+.btn2{
+    float: right;
+}
+.icon:hover{
+    color: #0f0e0e;
+}
+.icon-productname-section{
+    padding: 2px;
+}

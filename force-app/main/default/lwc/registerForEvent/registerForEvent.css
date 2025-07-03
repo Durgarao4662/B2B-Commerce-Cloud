@@ -1,0 +1,48 @@
+.registration-container {
+    padding: 20px;
+ }
+ 
+ .campaign-tile {
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .campaign-tile h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 8px;
+ }
+ 
+ .campaign-tile p {
+    font-size: 14px;
+    color: #666;
+    margin: 4px 0;
+ }
+ 
+ .campaign-tile lightning-button {
+    margin-top: 12px;
+ }
+ .header{
+    font-weight: bold;
+    font-size: large;
+ }
+ .error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+    font-size: large;
+ }
+ 
+ .success-message {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+    font-size: large;
+ }

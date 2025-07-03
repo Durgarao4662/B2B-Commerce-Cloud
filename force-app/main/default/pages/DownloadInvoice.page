@@ -1,0 +1,27 @@
+<apex:page standardController="OrderSummary" extensions="DownloadOrderInvoice" renderAs="pdf" contentType="application/pdf">
+    <h1>Order Invice</h1>
+    <p> Order Number: {!OrderSummary.OrderNumber}</p>
+    <p> Account :{!OrderSummary.Account.Name} </p>
+    <div class="f-s-12">
+    <table width="90%" >
+                <tr style="background-color:#F87C2C;color:white; ">
+                    <th>SNO.</th>
+                    <th>Productname</th>
+                    <th>Quantity</th>
+                    <th>UnitPrice</th>
+                    <th>TotalPrice</th>
+                </tr>
+        <apex:variable var="rowNum" value="{!1}" />
+            <apex:repeat value="{!orderItems}" var="item">
+            <tr>
+                <td style="text-align: center; padding: 5px;"><apex:outputText value="{!rowNum}"/></td>
+                <td>{!item.Product2.Name}</td>
+                <td>{!item.Quantity}</td>
+                <td>{!item.UnitPrice}</td>
+                <td>{!item.TotalPrice}</td>
+            </tr>
+            <apex:variable var="rowNum" value="{!rowNum+1}"/>
+        </apex:repeat>
+    </table>
+    </div>
+</apex:page>

@@ -1,0 +1,12 @@
+{
+  "type" : "sfdc_cms__trustedSites",
+  "title" : "trustedSites",
+  "contentBody" : {
+    "trustedSites" : [ {
+      "isActive" : true,
+      "source" : "https://vcpracticedev-dev-ed.develop.live-preview.salesforce-experience.com",
+      "sourceName" : "vcpracticedev"
+    } ]
+  },
+  "urlName" : "trustedsites"
+}

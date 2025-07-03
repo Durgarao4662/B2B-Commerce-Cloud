@@ -1,0 +1,10 @@
+<template>
+    <template if:true={_categorydata}>
+        <div class="container">
+            <img src={_categorydata.bannerImage.url} alt="Snow" style="width:100%;">
+            <div class="bottom-left">
+                {_categorydata.fields.Name}
+            </div>
+        </div>
+    </template>
+</template>

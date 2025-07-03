@@ -1,0 +1,41 @@
+<template>
+    <div class="registration-container">
+        <h2 class="header">Upcoming Events</h2>
+            <!-- Loading Spinner -->
+            <template if:true={isLoading}>
+                <lightning-spinner alternative-text="Loading"></lightning-spinner>
+            </template>
+     
+            <!-- Message Display -->
+            <template if:true={message}>
+                <p class={messageClass}>{message}</p>
+            </template>
+     
+            <!-- Campaign Tiles -->
+            <template if:true={campaigns}>
+                <lightning-layout multiple-rows>
+                    <template for:each={campaigns} for:item="campaign">
+                        <lightning-layout-item key={campaign.id} size="4">
+                            <div class="campaign-tile">
+                                <h3>{campaign.name}</h3>
+                                <p class="description">{campaign.description}</p>
+                                <p><strong>Address:</strong> {campaign.address}</p>
+                                <p><strong>Event Date:</strong> {campaign.eventDateTime}</p>
+                                <lightning-button 
+                                    label="Register" 
+                                    variant="brand" 
+                                    data-id={campaign.id} 
+                                    onclick={handleRegister}>
+                                </lightning-button>
+                            </div>
+                        </lightning-layout-item>
+                    </template>
+                </lightning-layout>
+            </template>
+     
+            <!-- No Campaigns Found -->
+            <template if:false={campaigns}>
+                <p>No campaigns available at the moment.</p>
+            </template>
+        </div>
+ </template>
